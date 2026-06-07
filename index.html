@@ -27,6 +27,9 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <!-- Navbar CSS -->
+  <link href="assets/css/navbar.css" rel="stylesheet">
+
   <!-- Hero Showcase Styles -->
   <style>
     .hero-showcase {
@@ -130,63 +133,6 @@
     #hero.hero-showcase {
       padding: 0;
       scroll-margin-top: 0;
-    }
-
-    .index-page .header {
-      --background-color: rgba(255, 255, 255, 0.82);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-    }
-    .index-page.scrolled .header {
-      --background-color: #ffffff;
-    }
-    @media (min-width: 769px) {
-      .header {
-        transition: padding 0.5s ease !important;
-      }
-      .index-page .header {
-        padding: 0 !important;
-      }
-      .index-page.scrolled .header {
-        padding: 20px 0 !important;
-        --background-color: #ffffff;
-      }
-    }
-    .mobile-nav-active .navmenu {
-      z-index: 99999 !important;
-    }
-    @media (max-width: 768px) {
-      .index-page .header {
-        backdrop-filter: none !important;
-        -webkit-backdrop-filter: none !important;
-      }
-    }
-    @media (max-width: 1199px) {
-      .mobile-nav-active .navmenu > ul {
-        inset: 0 !important;
-        border-radius: 0 !important;
-      }
-      .mobile-nav-active .mobile-nav-toggle {
-        color: #000 !important;
-        background: rgba(255, 255, 255, 0.9);
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .navmenu > ul {
-        padding-top: 60px;
-      }
-      .navmenu a::after {
-        font-family: "bootstrap-icons";
-        content: "\F285";
-        font-size: 14px;
-        line-height: 1;
-        color: var(--nav-dropdown-color);
-        opacity: 0.5;
-      }
     }
 
     .hero-showcase .carousel-indicators button {
