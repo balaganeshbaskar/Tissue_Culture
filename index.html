@@ -27,6 +27,138 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <!-- Hero Showcase Styles -->
+  <style>
+    .hero-showcase {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-showcase .carousel,
+    .hero-showcase .carousel-inner,
+    .hero-showcase .carousel-item {
+      height: 100%;
+    }
+    .hero-slide-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .hero-slide-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.15) 55%, rgba(0,0,0,0.05) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 80px 60px;
+      color: #fff;
+      transition: background 0.6s ease;
+    }
+    .hero-showcase .carousel-item:hover .hero-slide-overlay {
+      background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.2) 55%, rgba(0,0,0,0.08) 100%);
+    }
+    .hero-slide-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      opacity: 0.7;
+      font-family: var(--heading-font);
+    }
+    .hero-slide-overlay h2 {
+      font-size: 42px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 12px;
+      font-family: var(--heading-font);
+      line-height: 1.15;
+      max-width: 650px;
+    }
+    .hero-slide-overlay p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 20px;
+      max-width: 480px;
+      line-height: 1.5;
+    }
+    .hero-slide-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      text-decoration: none;
+      transition: opacity 0.3s;
+      width: fit-content;
+    }
+    .hero-slide-link:hover {
+      opacity: 0.75;
+      color: #fff;
+    }
+    .hero-slide-link i {
+      font-size: 16px;
+      transition: transform 0.3s;
+    }
+    .hero-slide-link:hover i {
+      transform: translateX(5px);
+    }
+    @media (max-width: 768px) {
+      .hero-showcase {
+        height: 70vh;
+      }
+      .hero-slide-overlay {
+        padding: 40px 24px;
+      }
+      .hero-slide-overlay h2 {
+        font-size: 26px;
+      }
+      .hero-slide-overlay p {
+        font-size: 14px;
+      }
+    }
+
+    #hero.hero-showcase {
+      padding: 0;
+      scroll-margin-top: 0;
+    }
+
+    .index-page .header {
+      --background-color: rgba(255, 255, 255, 0.82);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 0;
+    }
+    .index-page.scrolled .header {
+      --background-color: #ffffff;
+      padding: 20px 0;
+    }
+    .hero-showcase .carousel-indicators button {
+      width: 100px;
+      position: relative;
+      background-color: rgba(255, 255, 255, 0.75);
+      background-image: linear-gradient(to right, var(--accent-color), var(--accent-color));
+      background-size: 0% 100%;
+      background-repeat: no-repeat;
+      border: 0;
+    }
+    .hero-showcase .carousel-indicators button.active {
+      background-size: 100% 100%;
+      background-color: rgba(255, 255, 255, 0.75);
+      opacity: 1;
+    }
+    .hero-showcase .carousel-indicators button:not(.active) {
+      transition: none;
+    }
+  </style>
+
 </head>
 
 <body class="index-page">
@@ -57,24 +189,50 @@
   <main class="main">
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section">
+    <section id="hero" class="hero-showcase">
+      <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
 
-      <div class="container">
-        <div class="row gy-4">
-          <div class="col-lg-7 order-2 order-lg-1 d-flex flex-column justify-content-center">
-            <h1 data-aos="fade-up">Revolutionizing Plant Growth: Precision Tissue Culture for a Greener Tomorrow.</h1>
-            <p data-aos="fade-up" data-aos-delay="100">From Lab to Life: Propagating Healthy, High-Quality Plants at Scale</p>
-            <div class="d-flex flex-column flex-md-row" data-aos="fade-up" data-aos-delay="200">
-              <a href="about.html" class="btn-get-started">Get in Touch <i class="bi bi-arrow-right"></i></a>
-              <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video d-flex align-items-center justify-content-center ms-0 ms-md-4 mt-4 mt-md-0"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+        </div>
+
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <div class="hero-slide-bg" style="background-image: url('assets/img/1.jpg');"></div>
+            <div class="hero-slide-overlay">
+              <span class="hero-slide-label">Laboratory</span>
+              <h2>Advanced Tissue Culture Lab</h2>
+              <p>Disease-free propagation starts here.</p>
+              <a href="facilities.html" class="hero-slide-link">Explore Facilities <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
-          <div class="col-lg-5 order-1 order-lg-2 hero-img" data-aos="zoom-out">
-            <img src="assets/img/heroimage.jpg" class="img-fluid animated" alt="">
-          </div>
-        </div>
-      </div>
 
+          <div class="carousel-item">
+            <div class="hero-slide-bg" style="background-image: url('assets/img/values-2.jpeg');"></div>
+            <div class="hero-slide-overlay">
+              <span class="hero-slide-label">Greenhouse</span>
+              <h2>Climate-Controlled Greenhouses</h2>
+              <p>Where saplings transition to strength.</p>
+              <a href="facilities.html" class="hero-slide-link">Explore Facilities <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="hero-slide-bg" style="background-image: url('assets/img/values-3.jpeg');"></div>
+            <div class="hero-slide-overlay">
+              <span class="hero-slide-label">Field-Ready</span>
+              <h2>Healthy Plants, Delivered</h2>
+              <p>Serving growers across India.</p>
+              <a href="about.html" class="hero-slide-link">About Us <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
     </section><!-- /Hero Section -->
 
     <!-- About Section -->
@@ -656,6 +814,34 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Force Hero Carousel Auto-Cycle -->
+  <script>
+    (function() {
+      var heroEl = document.querySelector('#heroCarousel');
+      if (!heroEl) return;
+
+      var carousel = new bootstrap.Carousel(heroEl, {
+        interval: 4000,
+        ride: 'carousel',
+        pause: false,
+        wrap: true
+      });
+
+      heroEl.addEventListener('slide.bs.carousel', function(e) {
+        var btns = heroEl.querySelectorAll('.carousel-indicators button');
+        btns.forEach(function(btn) {
+          btn.style.transition = 'none';
+          btn.style.backgroundSize = '0% 100%';
+          btn.offsetHeight;
+          btn.style.transition = 'background-size 4s linear';
+        });
+        setTimeout(function() {
+          btns[e.to].style.backgroundSize = '100% 100%';
+        }, 50);
+      });
+    })();
+  </script>
 
 </body>
 
