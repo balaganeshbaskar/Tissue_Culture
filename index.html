@@ -152,6 +152,42 @@
         --background-color: #ffffff;
       }
     }
+    .mobile-nav-active .navmenu {
+      z-index: 99999 !important;
+    }
+    @media (max-width: 768px) {
+      .index-page .header {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+      }
+    }
+    @media (max-width: 1199px) {
+      .mobile-nav-active .navmenu > ul {
+        inset: 0 !important;
+        border-radius: 0 !important;
+      }
+      .mobile-nav-active .mobile-nav-toggle {
+        color: #000 !important;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .navmenu > ul {
+        padding-top: 60px;
+      }
+      .navmenu a::after {
+        font-family: "bootstrap-icons";
+        content: "\F285";
+        font-size: 14px;
+        line-height: 1;
+        color: var(--nav-dropdown-color);
+        opacity: 0.5;
+      }
+    }
 
     .hero-showcase .carousel-indicators button {
       width: 100px;
