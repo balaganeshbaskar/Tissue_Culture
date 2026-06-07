@@ -53,6 +53,8 @@
       background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.15) 55%, rgba(0,0,0,0.05) 100%);
       display: flex;
       flex-direction: column;
+      align-items: center;
+      text-align: center;
       justify-content: flex-end;
       padding: 80px 60px;
       color: #fff;
@@ -62,7 +64,7 @@
       background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.2) 55%, rgba(0,0,0,0.08) 100%);
     }
     .hero-slide-label {
-      font-size: 12px;
+      font-size: 18px;
       text-transform: uppercase;
       letter-spacing: 4px;
       font-weight: 600;
@@ -71,19 +73,19 @@
       font-family: var(--heading-font);
     }
     .hero-slide-overlay h2 {
-      font-size: 42px;
+      font-size: 52px;
       font-weight: 700;
       color: #fff;
       margin-bottom: 12px;
       font-family: var(--heading-font);
       line-height: 1.15;
-      max-width: 650px;
+      max-width: 720px;
     }
     .hero-slide-overlay p {
-      font-size: 16px;
+      font-size: 26px;
       color: rgba(255,255,255,0.7);
       margin-bottom: 20px;
-      max-width: 480px;
+      max-width: 560px;
       line-height: 1.5;
     }
     .hero-slide-link {
@@ -91,13 +93,13 @@
       align-items: center;
       gap: 8px;
       color: #fff;
-      font-size: 13px;
+      font-size: 18px;
       font-weight: 500;
       text-transform: uppercase;
       letter-spacing: 1.5px;
       text-decoration: none;
       transition: opacity 0.3s;
-      width: fit-content;
+      margin: 12px auto 0;
     }
     .hero-slide-link:hover {
       opacity: 0.75;
@@ -115,7 +117,7 @@
         height: 70vh;
       }
       .hero-slide-overlay {
-        padding: 40px 24px;
+        padding: 40px 20px;
       }
       .hero-slide-overlay h2 {
         font-size: 26px;
@@ -201,7 +203,7 @@
         <div class="carousel-inner">
 
           <div class="carousel-item active">
-            <div class="hero-slide-bg" style="background-image: url('assets/img/1.jpg');"></div>
+            <div class="hero-slide-bg" style="background-image: url('assets/img/lab1.jpg');"></div>
             <div class="hero-slide-overlay">
               <span class="hero-slide-label">Laboratory</span>
               <h2>Advanced Tissue Culture Lab</h2>
@@ -211,7 +213,7 @@
           </div>
 
           <div class="carousel-item">
-            <div class="hero-slide-bg" style="background-image: url('assets/img/values-2.jpeg');"></div>
+            <div class="hero-slide-bg" style="background-image: url('assets/img/2.jpg');"></div>
             <div class="hero-slide-overlay">
               <span class="hero-slide-label">Greenhouse</span>
               <h2>Climate-Controlled Greenhouses</h2>
@@ -221,7 +223,7 @@
           </div>
 
           <div class="carousel-item">
-            <div class="hero-slide-bg" style="background-image: url('assets/img/values-3.jpeg');"></div>
+            <div class="hero-slide-bg" style="background-image: url('assets/img/lab2.jpg');"></div>
             <div class="hero-slide-overlay">
               <span class="hero-slide-label">Field-Ready</span>
               <h2>Healthy Plants, Delivered</h2>
@@ -828,12 +830,25 @@
         wrap: true
       });
 
+      (function initFill() {
+        var btns = heroEl.querySelectorAll('.carousel-indicators button');
+        var activeIdx = 0;
+        btns.forEach(function(btn, i) {
+          btn.style.transition = 'none';
+          btn.style.backgroundSize = '0% 100%';
+          void btn.offsetHeight;
+          if (btn.classList.contains('active')) activeIdx = i;
+        });
+        btns[activeIdx].style.transition = 'background-size 4s linear';
+        btns[activeIdx].style.backgroundSize = '100% 100%';
+      })();
+
       heroEl.addEventListener('slide.bs.carousel', function(e) {
         var btns = heroEl.querySelectorAll('.carousel-indicators button');
         btns.forEach(function(btn) {
           btn.style.transition = 'none';
           btn.style.backgroundSize = '0% 100%';
-          btn.offsetHeight;
+          void btn.offsetHeight;
           btn.style.transition = 'background-size 4s linear';
         });
         setTimeout(function() {
