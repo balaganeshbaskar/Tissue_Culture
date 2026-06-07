@@ -136,12 +136,23 @@
       --background-color: rgba(255, 255, 255, 0.82);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
-      padding: 0;
     }
     .index-page.scrolled .header {
       --background-color: #ffffff;
-      padding: 20px 0;
     }
+    @media (min-width: 769px) {
+      .header {
+        transition: padding 0.5s ease !important;
+      }
+      .index-page .header {
+        padding: 0 !important;
+      }
+      .index-page.scrolled .header {
+        padding: 20px 0 !important;
+        --background-color: #ffffff;
+      }
+    }
+
     .hero-showcase .carousel-indicators button {
       width: 100px;
       position: relative;
