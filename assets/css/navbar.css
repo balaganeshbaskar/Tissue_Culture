@@ -25,8 +25,8 @@
   }
 }
 
-/* Mobile: always 20px padding, no backdrop-filter to avoid stacking conflict */
-@media (max-width: 768px) {
+/* Mobile + tablet: always 20px padding, no backdrop-filter to avoid stacking conflict */
+@media (max-width: 1199px) {
   .header,
   .scrolled .header {
     padding: 20px 0 !important;
