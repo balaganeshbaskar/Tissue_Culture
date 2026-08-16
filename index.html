@@ -178,6 +178,65 @@
       height: 100%;
       object-fit: cover;
     }
+
+    /* CTA Section */
+    .cta-section {
+      padding: 60px 0;
+      background-color: #f8f9fa;
+    }
+
+    .cta-card {
+      background-color: var(--accent-color);
+      border-radius: 16px;
+      padding: 48px 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
+
+    .cta-content h2 {
+      color: #fff;
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .cta-content p {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 16px;
+      margin-bottom: 0;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      padding: 14px 32px;
+      background-color: #fff;
+      color: var(--accent-color);
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      white-space: nowrap;
+      transition: all 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      background-color: var(--accent-color);
+      color: #fff;
+      border: 2px solid #fff;
+    }
+
+    @media (max-width: 768px) {
+      .cta-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 36px 28px;
+      }
+
+      .cta-content h2 {
+        font-size: 22px;
+      }
+    }
   </style>
 
 </head>
@@ -188,9 +247,8 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/img/logo.png" alt="">
-        <h1 class="sitename">Sree Bhairava Nursery</h1>
+        <img src="assets/img/logo.png" alt="Sree Bhairava Nursery" class="logo-icon">
+        <img src="assets/img/logo_text.png" alt="" class="logo-text">
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -770,13 +828,12 @@ Our export operations are designed to support customers seeking dependable sourc
 
 
     <!-- Clients Section -->
-    <section id="clients" class="clients section">
+    <!-- <section id="clients" class="clients section">
 
-      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Clients</h2>
         <p>We work with best clients<br></p>
-      </div><!-- End Section Title -->
+      </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
@@ -829,23 +886,19 @@ Our export operations are designed to support customers seeking dependable sourc
 
       </div>
 
-    </section><!-- /Clients Section -->
+    </section> -->
 
-    <!-- Contact Section -->
+    <!-- Contact Section — COMMENTED OUT
     <section id="contact" class="contact section">
 
-      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Contact</h2>
         <p>Contact Us</p>
-      </div><!-- End Section Title -->
+      </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
         <div class="row gy-4">
-
           <div class="col-lg-6">
-
             <div class="row gy-4">
               <div class="col-md-6">
                 <div class="info-item" data-aos="fade" data-aos-delay="200">
@@ -854,8 +907,7 @@ Our export operations are designed to support customers seeking dependable sourc
                   <p>Survey No.243/1A1A, 244/1A,</p>
                   <p>Nagondapalli Village, Hosur, Tamil Nadu - 635110</p>
                 </div>
-              </div><!-- End Info Item -->
-
+              </div>
               <div class="col-md-6">
                 <div class="info-item" data-aos="fade" data-aos-delay="300">
                   <i class="bi bi-telephone"></i>
@@ -863,8 +915,7 @@ Our export operations are designed to support customers seeking dependable sourc
                   <p>+91-99523 03575 (Rohein)</p>
                   <p>+91-99444 22687 (Chidambaram)</p>
                 </div>
-              </div><!-- End Info Item -->
-
+              </div>
               <div class="col-md-6">
                 <div class="info-item" data-aos="fade" data-aos-delay="400">
                   <i class="bi bi-envelope"></i>
@@ -872,8 +923,7 @@ Our export operations are designed to support customers seeking dependable sourc
                   <p>info@example.com</p>
                   <p>contact@example.com</p>
                 </div>
-              </div><!-- End Info Item -->
-
+              </div>
               <div class="col-md-6">
                 <div class="info-item" data-aos="fade" data-aos-delay="500">
                   <i class="bi bi-clock"></i>
@@ -881,49 +931,52 @@ Our export operations are designed to support customers seeking dependable sourc
                   <p>Monday - Friday</p>
                   <p>9:00AM - 05:00PM</p>
                 </div>
-              </div><!-- End Info Item -->
-
+              </div>
             </div>
-
           </div>
-
           <div class="col-lg-6">
             <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
               <div class="row gy-4">
-
                 <div class="col-md-6">
                   <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
                 </div>
-
                 <div class="col-md-6 ">
                   <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
                 </div>
-
                 <div class="col-12">
                   <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
                 </div>
-
                 <div class="col-12">
                   <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
                 </div>
-
                 <div class="col-12 text-center">
                   <div class="loading">Loading</div>
                   <div class="error-message"></div>
                   <div class="sent-message">Your message has been sent. Thank you!</div>
-
                   <button type="submit">Send Message</button>
                 </div>
-
               </div>
             </form>
-          </div><!-- End Contact Form -->
-
+          </div>
         </div>
-
       </div>
 
-    </section><!-- /Contact Section -->
+    </section>
+    -->
+
+    <!-- CTA Section -->
+    <section id="cta" class="cta-section">
+      <div class="container">
+        <div class="cta-card" data-aos="fade-up">
+          <div class="cta-content">
+            <h2>Ready to bring your plants to life?</h2>
+            <p>Partner with us for premium tissue culture plants and custom solutions.</p>
+          </div>
+          <a href="contact.html" class="cta-btn">Contact Us</a>
+        </div>
+      </div>
+    </section>
+    <!-- /CTA Section -->
 
   </main>
 
