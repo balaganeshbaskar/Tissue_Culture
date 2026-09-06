@@ -1114,6 +1114,18 @@ section,
   font-size: 16px;
 }
 
+.stats .stats-item .stat-number {
+  display: flex;
+  align-items: baseline;
+  line-height: 1.1;
+}
+
+.stats .stats-item .stat-suffix {
+  color: var(--heading-color);
+  font-size: 36px;
+  font-weight: 600;
+}
+
 /*--------------------------------------------------------------
 # Features Section
 --------------------------------------------------------------*/
