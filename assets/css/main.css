@@ -2063,6 +2063,17 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
+.portfolio-details .portfolio-row {
+  min-height: 480px;
+  align-items: center;
+}
+
+@media (max-width: 991px) {
+  .portfolio-details .portfolio-row {
+    min-height: 0;
+  }
+}
+
 /*--------------------------------------------------------------
 # Service Details Section
 --------------------------------------------------------------*/
