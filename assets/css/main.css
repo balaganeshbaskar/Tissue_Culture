@@ -941,6 +941,21 @@ section,
   text-align: center;
 }
 
+#labsCarousel .carousel-item {
+  height: 480px;
+}
+
+#labsCarousel .carousel-item img {
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  #labsCarousel .carousel-item {
+    height: 320px;
+  }
+}
+
 @media (max-width: 640px) {
   .hero h1 {
     font-size: 28px;
