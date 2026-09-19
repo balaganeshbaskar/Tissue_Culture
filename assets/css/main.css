@@ -952,8 +952,20 @@ section,
 
 @media (max-width: 768px) {
   #labsCarousel .carousel-item {
+    height: 320px;
+  }
+  #productionCarousel .carousel-item {
     height: 420px;
   }
+}
+
+#productionCarousel .carousel-item {
+  height: 460px;
+}
+
+#productionCarousel .carousel-item img {
+  height: 100%;
+  object-fit: cover;
 }
 
 @media (max-width: 640px) {
