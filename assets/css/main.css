@@ -933,6 +933,14 @@ section,
   border-radius: inherit;
 }
 
+.portfolio-project-name {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-bottom: 16px;
+  text-align: center;
+}
+
 @media (max-width: 640px) {
   .hero h1 {
     font-size: 28px;
