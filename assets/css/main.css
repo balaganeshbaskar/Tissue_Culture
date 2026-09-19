@@ -942,7 +942,7 @@ section,
 }
 
 #labsCarousel .carousel-item {
-  height: 480px;
+  height: 460px;
 }
 
 #labsCarousel .carousel-item img {
@@ -952,7 +952,7 @@ section,
 
 @media (max-width: 768px) {
   #labsCarousel .carousel-item {
-    height: 320px;
+    height: 420px;
   }
 }
 
