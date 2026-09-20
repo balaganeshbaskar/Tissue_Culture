@@ -74,12 +74,12 @@
         </div>
       </div>
       <nav class="breadcrumbs">
-        <div class="container">
+        <!-- <div class="container">
           <ol>
             <li><a href="index.html">Home</a></li>
             <li class="current">Contact</li>
           </ol>
-        </div>
+        </div> -->
       </nav>
     </div><!-- End Page Title -->
 
@@ -90,72 +90,44 @@
 
         <div class="row gy-4">
 
+          <!-- Left Column — Contact Info -->
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
 
-            <!-- Our Services — moved to Facilities page
-            <div class="service-box">
-              <h4>Our Services</h4>
-              <div class="services-list">
-                <a href="#" class="active"><i class="bi bi-arrow-right-circle"></i><span>Plants Growth Room</span></a>
-                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Green House</span></a>
-                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Contract Production</span></a>
-              </div>
+            <div class="info-item" data-aos="fade" data-aos-delay="100">
+              <i class="bi bi-telephone"></i>
+              <h3>Call Us</h3>
+              <p>+91-99523 03575</p>
+              <p>+91-99444 22687</p>
             </div>
-            -->
 
-            <div class="help-box d-flex flex-column justify-content-center align-items-center">
-              <i class="bi bi-headset help-icon"></i>
-              <h4>Have a Question?</h4>
-              <p class="d-flex align-items-center mt-2 mb-0"><i class="bi bi-telephone me-2"></i> <span>+91-99523 03575 / +91-99444 22687</span></p>
-              <p class="d-flex align-items-center mt-1 mb-0"><i class="bi bi-envelope me-2"></i> <a href="mailto:info@example.com">info@example.com</a></p>
+            <div class="info-item mt-4" data-aos="fade" data-aos-delay="200">
+              <i class="bi bi-envelope"></i>
+              <h3>Email Us</h3>
+              <p>info@example.com</p>
+            </div>
+
+            <div class="info-item mt-4" data-aos="fade" data-aos-delay="300">
+              <i class="bi bi-geo-alt"></i>
+              <h3>Address</h3>
+              <p>Survey No.243/1A1A, 244/1A,</p>
+              <p>Nagondapalli Village, Hosur, Tamil Nadu - 635110</p>
+              <p>GSTIN : 33ABEPC3175B1ZE</p>
+            </div>
+
+            <div class="info-item mt-4" data-aos="fade" data-aos-delay="400">
+              <i class="bi bi-clock"></i>
+              <h3>Open Hours</h3>
+              <p>Monday - Saturday</p>
+              <p>9:00AM - 05:00PM</p>
             </div>
 
           </div>
 
+          <!-- Right Column — Form + Map -->
           <div class="col-lg-8">
 
-            <div class="row gy-4">
-
-              <div class="col-md-6">
-                <div class="info-item" data-aos="fade" data-aos-delay="200">
-                  <i class="bi bi-geo-alt"></i>
-                  <h3>Address</h3>
-                  <p>Survey No.243/1A1A, 244/1A,</p>
-                  <p>Nagondapalli Village, Hosur, Tamil Nadu - 635110</p>
-                  <p>GSTIN : 33ABEPC3175B1ZE</p>
-                </div>
-              </div>
-
-              <div class="col-md-6">
-                <div class="info-item" data-aos="fade" data-aos-delay="300">
-                  <i class="bi bi-telephone"></i>
-                  <h3>Call Us</h3>
-                  <p>+91-99523 03575</p>
-                  <p>+91-99444 22687</p>
-                </div>
-              </div>
-
-              <div class="col-md-6">
-                <div class="info-item" data-aos="fade" data-aos-delay="400">
-                  <i class="bi bi-envelope"></i>
-                  <h3>Email Us</h3>
-                  <p>info@example.com</p>
-                  <p>contact@example.com</p>
-                </div>
-              </div>
-
-              <div class="col-md-6">
-                <div class="info-item" data-aos="fade" data-aos-delay="500">
-                  <i class="bi bi-clock"></i>
-                  <h3>Open Hours</h3>
-                  <p>Monday - Saturday</p>
-                  <p>9:00AM - 05:00PM</p>
-                </div>
-              </div>
-
-            </div>
-
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="100">
+              <h2 class="contact-form-heading text-center" data-aos="fade-up">Enquiry Form</h2>
               <div class="row gy-4">
 
                 <div class="col-md-6">
@@ -178,12 +150,25 @@
                   <div class="loading">Loading</div>
                   <div class="error-message"></div>
                   <div class="sent-message">Your message has been sent. Thank you!</div>
-
                   <button type="submit">Send Message</button>
                 </div>
 
               </div>
             </form>
+
+            <div class="mt-4" data-aos="fade-up" data-aos-delay="200">
+              <div style="border-radius: 12px; overflow: hidden;">
+               <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3892.8084087318152!2d77.78023497577647!3d12.66056362161982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae775000000001%3A0x66a40d6d8ff9c541!2sSree%20Bairava%20Nursery!5e0!3m2!1sen!2sin!4v1789928406112!5m2!1sen!2sin"
+                  width="100%"
+                  height="350"
+                  style="border:0;"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+            </div>
 
           </div>
 
@@ -204,8 +189,8 @@
             <span class="sitename">Sree Bairava Nursery</span>
           </a>
           <div class="footer-contact pt-3">
-            <p>Survey No.243/1A1A, 244/1A,</p>
-            <p>Nagondapalli Village, Hosur, Tamil Nadu - 635110</p>
+                  <p>Survey No.243/1A1A, 244/1A,</p>
+                  <p>Nagondapalli Village, Hosur, Tamil Nadu - 635110</p>
             <p class="mt-3"><strong>Phone:</strong> <span>+91-99523 03575 / +91-99444 22687</span></p>
             <p><strong>Email:</strong> <span>info@example.com</span></p>
           </div>

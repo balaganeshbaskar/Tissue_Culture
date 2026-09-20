@@ -2038,7 +2038,14 @@ section,
 .contact .php-email-form {
   background: color-mix(in srgb, var(--default-color), transparent 96%);
   padding: 30px;
-  height: 100%;
+  height: auto;
+}
+
+.contact-form-heading {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-bottom: 20px;
 }
 
 .contact .php-email-form input[type=text],
